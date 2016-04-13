@@ -1,0 +1,16 @@
+name: PoliceAPI
+main: yuu528\PoliceAPI
+author: yuu528
+version: 1.0
+api: [1.10.0]
+load: STARTUP
+description: Add Police API
+commands:
+ police:
+  description: Police API Command
+  usage: /police <list/add/del> [Player]
+  permission: policeapi.commands
+permissions:
+ policeapi.commands:
+  default: op
+  description: PoliceAPI Command Accept.
