@@ -10,11 +10,6 @@ PoliceAPI is PocketMine-MP Plugin.
 
 ##APIとしての機能
 **APIとしての機能は今後追加していきますので追加希望があればお知らせください**
-まず、最初にコードで
-```php:Code
-	addAddon("プラグインの名前");
-```
-の関数を実行してください
 
 1. getPolice() - 引数:なし
 officer.ymlのgetAll(true)の短縮です
@@ -32,6 +27,6 @@ officer.ymlのgetAll(true)の短縮です
 警察全員にブロードキャストします
 
 ##Todo
-□ APIの追加
+□ API機能の追加
 
 END

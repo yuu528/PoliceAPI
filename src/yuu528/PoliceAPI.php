@@ -18,46 +18,11 @@ class PoliceAPI extends PluginBase
 		$this->getServer()->getLogger()->info("[PoliceAPI] PoliceAPI Loaded!");
 		if(!file_exists($this->getDataFolder())){
 			mkdir($this->getDataFolder(), 0744, true);
-			$this->getServer()->getLogger->info("[PoliceAPI] Create Data Folder");
+			$this->getServer()->getLogger()->info("[PoliceAPI] Create Data Folder");
 		}
-
-		if(!file_exists($this->getDataFolder()."tmp")){
-			mkdir($this->getDataFolder()."tmp/", 0744, true);
-		}
-
 		$this->police = new Config($this->getDataFolder()."officer.yml", Config::YAML);
-		$this->addon = new Config($this->getDataFolder()."tmp/plugins.yml", Config::YAML);
 		//Add Configs Here
 		$this->getServer()->getLogger()->info("[PoliceAPI] Loaded Config");
-	}
-
-	public function addAddon($name){
-		if($this->addon->exists($name)){
-			return false;
-		}
-			$this->addon->set($name, "enable");
-			$this->addon->save();
-			return true;
-	}
-
-	public function removeAddon($name){
-		$this->addon->remove($name);
-		$this->addon->save();
-		return true;
-	}
-
-	public function getAddon(){
-		return $this->addon->getAll(true);
-	}
-
-	public function isAddon($name){
-		return $this->addon->exists($name);
-	}
-
-	public function onDisable(){
-		foreach ($this->addon->getAll(true) as $value) {
-			$this->removeAddon($value);
-		}
 	}
 
 	//Game Code
