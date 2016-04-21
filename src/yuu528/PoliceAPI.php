@@ -82,7 +82,7 @@ class PoliceAPI extends PluginBase
 	}
 
 	public function broadcastPolice($message){
-		foreach ($this->police->getAll() as $name) {
+		foreach ($this->police->getAll() as $name => $not) {
 			$player = $this->getServer()->getPlayer($name);
 			if(!$player instanceof Player) return;
 			$player->sendMessage($message);
