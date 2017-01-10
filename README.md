@@ -1,6 +1,6 @@
-# PoliceAPI
-PoliceAPI is PocketMine-MP Plugin.
-
+# PoliceAPI  
+PoliceAPI is PocketMine-MP Plugin.  
+**注意 - 作りかけです!**  
 使用法: *これはAPIです!* が警察の追加、削除、一覧表示ができます。
 
 ##コマンド
@@ -27,6 +27,6 @@ officer.ymlのgetAll(true)の短縮です
 警察全員にブロードキャストします
 
 ##Todo
-□ API機能の追加
+- [ ] API機能の追加
 
 END
